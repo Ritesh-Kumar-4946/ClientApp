@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ritesh.clientapp.MainActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mainscreen_toolbar"
+        android:elevation="7dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@android:color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start">
+
+            <TextView
+                android:id="@+id/txt_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="Home"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_main">
+
+
+        <!--main screen dashboard items (Start)-->
+        <FrameLayout
+            android:id="@+id/containerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="-5dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_main_dashboard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+            </RelativeLayout>
+
+
+        </FrameLayout>
+        <!--main screen dashboard items (End)-->
+
+
+        <!--left <drawer oppen items> -->
+        <RelativeLayout
+            android:id="@+id/rl_left_slidingdrawer"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#FFFFFF">
+
+            <!-- android:layout_gravity="start" -->
+
+            <RelativeLayout
+                android:id="@+id/SliderRelativelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <!--Header section (Start)-->
+                <RelativeLayout
+                    android:id="@+id/rl_dr_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/dr_profile_header">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_profiel_imageview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/profile_image"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/ic_profile_image_bg"
+                            android:src="@drawable/the_app_guru"
+                            app:civ_border_color="#FFFFFFFF"
+                            app:civ_border_width="1dp" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+                <!--Header section (End)-->
+
+
+                <ScrollView
+                    android:id="@+id/sv_dr_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_dr_header">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_drawer_items"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_dr_my_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/drawable_list_item_click_effect">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginStart="5dp"
+                                android:text="Profile"
+                                android:textColor="#000000"
+                                android:textSize="15sp" />
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_dr_my_task"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@id/rl_dr_my_profile"
+                            android:background="@drawable/drawable_list_item_click_effect">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginStart="5dp"
+                                android:text="Tasks"
+                                android:textColor="#000000"
+                                android:textSize="15sp"/>
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_dr_dashboard"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@id/rl_dr_my_task"
+                            android:background="@drawable/drawable_list_item_click_effect">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginStart="5dp"
+                                android:text="Dashboard"
+                                android:textColor="#000000"
+                                android:textSize="15sp" />
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_dr_help"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@id/rl_dr_dashboard"
+                            android:background="@drawable/drawable_list_item_click_effect">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginStart="5dp"
+                                android:text="Help"
+                                android:textColor="#000000"
+                                android:textSize="15sp" />
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_dr_logout"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@id/rl_dr_help"
+                            android:background="@drawable/drawable_list_item_click_effect">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginStart="5dp"
+                                android:text="Logout"
+                                android:textColor="#000000"
+                                android:textSize="15sp" />
+
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                </ScrollView>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+        <!--left <drawer oppen items> -->
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+</RelativeLayout>

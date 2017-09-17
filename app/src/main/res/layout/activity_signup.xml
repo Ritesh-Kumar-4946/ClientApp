@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/abl_create_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_create_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/signup_red"
+            android:elevation="7dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@android:color/white">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start">
+
+                <TextView
+                    android:id="@+id/toolbar_tv_edit_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="Signup"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_create_profile_image_content"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/abl_create_profile"
+        android:background="@color/signup_bg_color">
+
+        <!--profile image (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_create_profile_imageview"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/civ_create_profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/ic_profile_image_bg"
+                android:elevation="10dp"
+                app:civ_border_color="#FFFFFFFF"
+                app:civ_border_width="2dp" />
+
+
+        </RelativeLayout>
+        <!--profile image (End)-->
+
+
+        <!--profile image edit(Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_create_profile_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="-40dp"
+            android:layout_marginStart="-40dp"
+            android:layout_toEndOf="@id/rl_create_profile_imageview"
+            android:layout_toRightOf="@id/rl_create_profile_imageview">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_picker_imagee" />
+
+        </RelativeLayout>
+        <!--profile image edit(End)-->
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_create_profile_image_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_create_profile_fields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tv_text_your_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Create Profile"
+                android:textColor="@color/signup_red"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_text_your_profile"
+                android:layout_marginTop="20dp">
+
+
+                <TextView
+                    android:id="@+id/tv_text_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="Your Name *"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+
+                <EditText
+                    android:id="@+id/edt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/tv_text_name"
+                    android:background="@color/greyLight"
+                    android:backgroundTint="@color/greyLight"
+                    android:gravity="top|center_vertical"
+                    android:hint="Enter Name"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:padding="15dp"
+                    android:textCursorDrawable="@drawable/cursor_size"
+                    android:textSize="15sp" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_name"
+                android:layout_marginTop="10dp">
+
+
+                <TextView
+                    android:id="@+id/tv_text_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="Your Mobile *"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+
+                <EditText
+                    android:id="@+id/edt_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/tv_text_mobile"
+                    android:background="@color/greyLight"
+                    android:backgroundTint="@color/greyLight"
+                    android:digits="0123456789"
+                    android:gravity="top|center_vertical"
+                    android:hint="Enter Mobile"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:padding="15dp"
+                    android:textCursorDrawable="@drawable/cursor_size"
+                    android:textSize="15sp" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_mobile"
+                android:layout_marginTop="10dp">
+
+
+                <TextView
+                    android:id="@+id/tv_text_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="Your Email *"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+
+                <EditText
+                    android:id="@+id/edt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/tv_text_email"
+                    android:background="@color/greyLight"
+                    android:backgroundTint="@color/greyLight"
+                    android:gravity="top|center_vertical"
+                    android:hint="Enter Email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:padding="15dp"
+                    android:textCursorDrawable="@drawable/cursor_size"
+                    android:textSize="15sp" />
+
+
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_create_profile_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_email"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="50dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/signup_red"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="3dp"
+                app:cardMaxElevation="3dp">
+
+                <TextView
+                    android:id="@+id/tv_create_profile_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="Create Profile"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </android.support.v7.widget.CardView>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

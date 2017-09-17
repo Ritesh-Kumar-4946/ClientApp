@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ClientApp</string>
+
+
+
+    <!--drawer text (Start)-->
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+
+
+</resources>

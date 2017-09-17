@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/abl_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_create_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/signup_red"
+            android:elevation="7dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@android:color/white">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start">
+
+                <TextView
+                    android:id="@+id/toolbar_tv_edit_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="Login"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_app_logo"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/abl_login"
+        android:background="@color/signup_bg_color">
+
+
+        <com.ritesh.clientapp.CustomFonts
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Go Chela Client"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_text_your_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_app_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Login Detail"
+        android:textColor="@color/signup_red"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_login_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_text_your_profile"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:padding="20dp">
+
+
+        <TextView
+            android:id="@+id/tv_text_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="Your Registered Email / Mobile *"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+
+        <EditText
+            android:id="@+id/edt_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/tv_text_mobile"
+            android:background="@color/greyLight"
+            android:backgroundTint="@color/greyLight"
+            android:gravity="top|center_vertical"
+            android:hint="Enter Email / Mobile"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:textCursorDrawable="@drawable/cursor_size"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_otp_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_text_your_profile"
+        android:layout_marginTop="10dp"
+        android:padding="20dp">
+
+
+        <TextView
+            android:id="@+id/tv_text_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="OTP *"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+
+        <EditText
+            android:id="@+id/edt_otp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/tv_text_otp"
+            android:background="@color/greyLight"
+            android:backgroundTint="@color/greyLight"
+            android:gravity="top|center_vertical"
+            android:hint="Enter OTP"
+            android:inputType="text"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:textCursorDrawable="@drawable/cursor_size"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_login_get_otp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_text_your_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="180dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/signup_red"
+        app:cardCornerRadius="5dp"
+        android:visibility="gone"
+        app:cardElevation="3dp"
+        app:cardMaxElevation="3dp">
+
+        <TextView
+            android:id="@+id/tv_get_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="Get OTP"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_login_send_otp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_text_your_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="180dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/signup_red"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="3dp"
+        app:cardMaxElevation="3dp">
+
+        <TextView
+            android:id="@+id/tv_send_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="Send OTP"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="drawer_click_effect">#8ccc77</color>
+    <color name="mainscreen_toolbar">#FF289604</color>
+    <color name="dr_profile_header">#585858</color>
+    <color name="signup_red">#ff3333</color>
+    <color name="grey">#808080</color>
+    <color name="reddark">#b30f00</color>
+    <color name="greyLight">#dadada</color>
+    <color name="signup_bg_color">#FF289604</color>
+</resources>
