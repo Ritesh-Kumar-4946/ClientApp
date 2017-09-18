@@ -89,4 +89,5 @@ dependencies {
     //image picker during edit profile  01
     compile 'com.github.jksiezni.permissive:permissive:0.2'
     //image picker during edit profile  02
+    compile 'com.chaos.view:pinview:1.1.0'
 }

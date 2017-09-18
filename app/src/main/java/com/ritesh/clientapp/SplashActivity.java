@@ -42,9 +42,9 @@ public class SplashActivity extends AppCompatActivity {
                         && !Appconstant.str_login_test.toString().trim().equals("")) {
                     Log.e("Login detail found :", " Now Check Business Create Status");
 
-//                    Intent Screen = new Intent(SplashActivity.this, WebViewActivity.class);
-//                    startActivity(Screen);
-//                    finish();
+                    Intent Screen = new Intent(SplashActivity.this, LoginActivity.class);
+                    startActivity(Screen);
+                    finish();
 
                 }
 
@@ -52,10 +52,10 @@ public class SplashActivity extends AppCompatActivity {
                 /* if user login test is false on oncreate then redirect the user to login & registration page */
                 else {
 
-//                    Log.e("Login detail not found :", "Go to Login Screen");
-//                    Intent Gologincreen = new Intent(getApplicationContext(), LoginActivity.class);
-//                    startActivity(Gologincreen);
-//                    finish();
+                    Log.e("Login detail not found :", "Go to Login Screen");
+                    Intent Gologincreen = new Intent(getApplicationContext(), LoginActivity.class);
+                    startActivity(Gologincreen);
+                    finish();
 
                 }
             }
